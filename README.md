@@ -1,79 +1,89 @@
-[![](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/netlify/netlifycms)
+![](/jekylltheme.jpg)
 
-# Jekyll + Netlify CMS with Netlify Identity
+# Jekyll Theme MDUI
 
-This is the basic Jekyll starter site, with Netlify CMS integrated and using Netlify Identity for
-authentication.
+> A Jekyll theme based on mdui
 
-## Getting started
+> 主题停更，只做兼容性维护。期待 V2 吧！
 
-Use our deploy button to get your own copy of the repository:
+## Contents
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/jekyll-netlify-cms&stack=cms)
+* [General](#general)
+* [Demo](#demo)
+* [Quick start](#quick-start)
+* [Docs](#docs)
+* [TODO](#todo)
+* [Note](#note)
+* [Contributing](#contributing)
+* [Development](#development)
+* [License](#license)
 
-This will setup everything needed for running the CMS:
+## General
 
-* A new repository in your GitHub account with the code
-* Full Continuous Deployment to Netlify's global CDN network
-* Control users and access with Netlify Identity
-* Manage content with Netlify CMS
+[![Version](https://img.shields.io/badge/version-0.5.2-green.svg?style=flat-square)]()
+[![Jekyll](https://img.shields.io/badge/Jekyll-3.5+-green.svg?style=flat-square)](https://jekyllrb.com/)
+[![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
 
-The email address associated with your Netlify account will receive an email inviting you as an
-Identity user - click Accept in the email to set your new password, then navigate to `/admin` on
-your site to log in.
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/KeJunMao/jekyll-theme-mdui.svg?style=flat-square&label=code%20climate)](https://codeclimate.com/github/KeJunMao/jekyll-theme-mdui/)
+[![Build Status](https://img.shields.io/travis/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://travis-ci.org/KeJunMao/jekyll-theme-mdui)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
-Now you're all set, and you can start editing content!
+[![Author](https://img.shields.io/badge/author-KeJun-blue.svg?style=flat-square)](https://blog.kejun.space)
 
-**Note:** if you switch the repo that was created to private, you'll need to regenerate your token,
-as the token generated using the deploy to Netlify button can only access public repositories. To
-regenerate your token, head to "Settings" in your Netlify site dashboard, go to the "Identity"
-section, then scroll to "Services" where you'll see an "Edit settings" button. Click that and you'll
-see a text link to "Generate access token in GitHub".
+## Demo
 
-## Local Development
+[KeJun's Blog](https://blog.kejun.me)
 
-Clone this repository and run:
+## Quick start 
 
-```bash
-bundle install
-bundle exec jekyll server --watch
-```
+[Quick start](http://mdui.kejun.space/#/quickstart)
 
-Now navigate to [localhost:4000](http://localhost:4000/) to preview the site, and
-[localhost:4000/admin](http://localhost:4000/admin) to log into the CMS.
+[快速开始](http://mdui.kejun.space/#/zh-cn/quickstart)
 
-## Authenticating without Netlify Identity
+## Docs
 
-Netlify provides basic OAuth so you can log in to Netlify CMS with your GitHub profile directly if
-you prefer not to use Netlify Identity. To do so, go to [the GitHub developer application
-screen](https://github.com/settings/developers) and **register new application**. The Authorization
-callback URL you'll need to enter is `https://api.netlify.com/auth/done`. 
+[Docs](http://mdui.kejun.space/#/)(!!!Need Help!!!)
 
-Once you've set up the application, go back to your Netlify site dashboard, navigate to the
-**Access** tab. Then fill in your new Client ID and Client Secret in the Github Authentication
-Provider section and check the **Enable GitHub** box.
+[中文文档](http://mdui.kejun.space/#/zh-cn/)
 
-You'll then need to update the `backend` settings at the top of the `admin/config.yml` file in your
-site repo:
+## TODO
 
-```yaml
-backend:
-  name: github
-  repo: username/repo # your GitHub username and repository name, separated by a slash
-  branch: master # optional, default value is "master"
-```
+- [ ] V2
 
-Now anybody with write access to your GitHub repository can log in at yoursite.netlify.com/admin
-and use the CMS.
+## Note
 
-**Enjoy!**
+File Required or Optional:
 
-## Bug reports, feature requests, etc
+|files|Required or Optional|Description|
+|---  |---                 |---        |
+|mainifest.json|Optional   |Is the only file that every WebExtension must contain.See [here](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json).|
+|sw.js|Optional            |Service Workers.See [here](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers).|
+|search.json|Optional|If you use the search page, it is required.|
+|tags.json|Optional|If you use the tags page, it is required.|
+|_data/friends.yml|Optional|If you use the friends page, it is required.|
+|_data/sns.yml|Optional|It is footer sns,if you want used, it is required.|
+|_data/meng.yml|Optional|It is Meng option,if you want used, it is required.|
+|_data/site.yml|Required|It is theme config.|
+|_data/lang.yml|Required|It is language config.|
+|_data/menus.yml|Required|It is site menus config.|
 
-We love feedback, contributions, better documentation, tutorials, general comments,
-random hatemail, rants, love, crazy ideas, etc, etc!
+How to use? See Docs.
 
-Contact us at [any of netlify's normal channels](https://www.netlify.com/contact) and
-open issues or pull requests for Netlify CMS at [the netlify-cms GitHub
-repo](https://github.com/netlify/netlify-cms). If you need realtime help with setting up Netlify
-CMS, you can reach out in the [Netlify CMS Gitter](https://gitter.im/netlify/netlifycms).
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/KeJunMao/jekyll-theme-mdui. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, and `assets` tracked with Git will be released.
+
+## License
+
+[![license](https://img.shields.io/github/license/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://github.com/KeJunMao/jekyll-theme-mdui/blob/master/LICENSE.txt)
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+

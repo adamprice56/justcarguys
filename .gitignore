@@ -1,4 +1,10 @@
-_site
+*.gem
+.bundle
 .sass-cache
+_site
+Gemfile.lock
+node_modules
 .jekyll-metadata
-.users.yml
+assets/live2d
+package-lock.json
+.vscode
